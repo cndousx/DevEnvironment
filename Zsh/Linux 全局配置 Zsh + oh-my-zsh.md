@@ -168,3 +168,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ```
+
+
+
+![image-20260205134548436](https://cruder-figure-bed.oss-cn-beijing.aliyuncs.com/markdown/2026/02/05/13-45-48-736-7c8f83f0999b4a1c922dc63de0b4c4b7.png)
+
