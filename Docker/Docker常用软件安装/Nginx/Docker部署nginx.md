@@ -1,26 +1,17 @@
 ## Docker 部署 nginx
 
-### 拉取镜像
+### 利用dockerfile
 
-```sh
-docker pull nginx:1.29.2
+基于1.29.2构建自定义镜像
+
+```powershell
+docker build -t dousx-nginx:1.29.2 .
 ```
 
-### 创建容器
+运行
 
-```sh
-docker run --restart=always --name nginx -p 81:81 -p 82:82 -d nginx:1.29.2
-```
-
-```sh
-# 使用宿主机配置
-docker run --restart=always --name nginx -v C:/Users/dousx/.data/.docker/nginx/conf.d/:/etc/nginx/conf.d/ -p 81:81 -p 82:82 -d nginx:1.29.2
-```
-
-### 进入容器
-
-```sh
-docker exec -it nginx /bin/bash
+```powershell
+docker run --restart=always --name nginx -v C:/Users/dousx/.data/.docker/nginx/conf.d/:/etc/nginx/conf.d/ -p 81:81 -p 82:82 -d dousx-nginx:1.29.2
 ```
 
 ### 安装常用工具
