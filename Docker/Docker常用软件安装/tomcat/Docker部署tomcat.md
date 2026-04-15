@@ -19,3 +19,26 @@ rm webapps -r
 ```shell
 mv webapps.dist/ webapps
 ```
+
+## 2. 修改时区
+
+```shell
+# 进入容器
+docker exec -it tomcat /bin/bash
+```
+
+```shell
+# 在容器内执行
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+echo "Asia/Shanghai" > /etc/timezone
+
+# 退出容器
+exit
+```
+
+```shell
+# 重启容器
+docker restart tomcat
+
+```
