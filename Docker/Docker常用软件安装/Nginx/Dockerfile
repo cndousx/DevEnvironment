@@ -1,4 +1,4 @@
-FROM nginx:1.29.2
+FROM nginx:1.30.0
 
 LABEL maintainer="dousx_cn@163.com"
 LABEL author="dousx"

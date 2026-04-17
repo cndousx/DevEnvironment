@@ -2,16 +2,16 @@
 
 ### 利用dockerfile
 
-基于1.29.2构建自定义镜像
+基于1.30.0构建自定义镜像
 
 ```powershell
-docker build -t dousx-nginx:1.29.2 .
+docker build -t dousx-nginx:1.30.0 .
 ```
 
 运行
 
 ```powershell
-docker run --restart=always --name nginx -v C:/Users/dousx/.data/.docker/nginx/conf.d/:/etc/nginx/conf.d/ -p 81:81 -p 82:82 -d dousx-nginx:1.29.2
+docker run --restart=always --name nginx -v C:/Users/dousx/.data/.docker/nginx/conf.d/:/etc/nginx/conf.d/ -p 81:81 -p 82:82 -d dousx-nginx:1.30.0
 ```
 
 ### 安装常用工具
@@ -27,7 +27,7 @@ apt install vim tree net-tools iputils-ping -y
 ```sh
 # 切换到nginx配置目录下
 cd /etc/nginx/conf.d/
-# 备份默认配置(1.29.2没有default.conf默认配置)
+# 备份默认配置(1.30.0没有default.conf默认配置)
 # cp default.conf default.conf.bak
 ```
 
