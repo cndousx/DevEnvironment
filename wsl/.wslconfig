@@ -1,0 +1,15 @@
+# Settings apply across all Linux distros running on WSL 2
+[wsl2]
+
+# Limits VM memory to use no more than 8 GB, this can be set as whole numbers using GB or MB
+memory=12GB
+
+# Sets the VM to use eight virtual processors
+processors=8
+
+[experimental]
+autoMemoryReclaim=gradual    # 开启自动回收内存，可在 gradual, dropcache, disabled 之间选择
+networkingMode=mirrored      # 开启镜像网络
+dnsTunneling=true            # 开启 DNS Tunneling
+firewall=true                # 开启 Windows 防火墙
+autoProxy=true               # 开启自动同步代理
